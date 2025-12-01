@@ -53,7 +53,6 @@ revisor = actor_prompt_template.partial(
     first_instruction=revise_instructions,
 ) | llm.bind_tools(tools=[ReviseAnswer], tool_choice="ReviseAnswer")
 
-revisor.invoke()
 
 if __name__ == "__main__":
     human_message = HumanMessage(
